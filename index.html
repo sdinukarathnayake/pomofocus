@@ -3,18 +3,72 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
 
-    <link rel="stylesheet" href="index.css">
+    <title>FocusFlow - Pomodoro Timer</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
+    <div class="container">
+        <header>
+            <h1>FocusFlow</h1>
+            <p class="tagline">Boost your productivity with the Pomodoro Technique</p>
+        </header>
+        
+        <main>
+            <div class="timer-circle">
+                <div class="time-display">25:00</div>
+            </div>
+            
+            <div class="session-controls">
+                <button class="session-btn active" id="pomodoro-btn">Pomodoro</button>
+                <button class="session-btn" id="short-break-btn">Short Break</button>
+                <button class="session-btn" id="long-break-btn">Long Break</button>
+            </div>
+            
+            <div class="controls">
+                <button class="btn btn-primary" id="start-btn">
+                    <i class="fas fa-play"></i> Start
+                </button>
+                <button class="btn btn-secondary" id="reset-btn">
+                    <i class="fas fa-redo"></i> Reset
+                </button>
+            </div>
+            
+            <div class="settings">
+                <div class="setting-item">
+                    <span class="setting-label">Pomodoro Duration</span>
+                    <div class="setting-value">
+                        <button class="value-btn" id="pomodoro-minus">-</button>
+                        <span class="value-display" id="pomodoro-length">25</span>
+                        <button class="value-btn" id="pomodoro-plus">+</button>
+                    </div>
+                </div>
+                <div class="setting-item">
+                    <span class="setting-label">Short Break</span>
+                    <div class="setting-value">
+                        <button class="value-btn" id="short-break-minus">-</button>
+                        <span class="value-display" id="short-break-length">5</span>
+                        <button class="value-btn" id="short-break-plus">+</button>
+                    </div>
+                </div>
+                <div class="setting-item">
+                    <span class="setting-label">Long Break</span>
+                    <div class="setting-value">
+                        <button class="value-btn" id="long-break-minus">-</button>
+                        <span class="value-display" id="long-break-length">15</span>
+                        <button class="value-btn" id="long-break-plus">+</button>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    
+    <footer>
+        <p>© 2023 FocusFlow Pomodoro Timer | Designed for productivity</p>
+    </footer>
 
-    <h1>Hello World!</h1>
-    <p>This is a sample HTML file.</p>
+    <script src="script.js"></script>
 
-    <p>This is another paragraph.</p>
-    <p>And yet another one.</p>
-
-    <button>Click Me!</button>
 </body>
 </html>
