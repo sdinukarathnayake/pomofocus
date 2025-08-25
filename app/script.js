@@ -104,7 +104,6 @@ document.addEventListener('DOMContentLoaded', function () {
     function switchMode(mode) {
         currentMode = mode;
 
-        // Update active button
         pomodoroBtn.classList.remove('active');
         shortBreakBtn.classList.remove('active');
         longBreakBtn.classList.remove('active');
@@ -112,15 +111,15 @@ document.addEventListener('DOMContentLoaded', function () {
         if (mode === 'pomodoro') {
             pomodoroBtn.classList.add('active');
             timeLeft = pomodoroLength * 60;
-            timerCircle.style.background = 'conic-gradient(#4CAF50 0%, rgba(76, 175, 80, 0.2) 0%)';
+            timerCircle.style.background = 'conic-gradient(#4A90E2 0%, rgba(74, 144, 226, 0.2) 0%)';
         } else if (mode === 'short-break') {
             shortBreakBtn.classList.add('active');
             timeLeft = shortBreakLength * 60;
-            timerCircle.style.background = 'conic-gradient(#2196F3 0%, rgba(33, 150, 243, 0.2) 0%)';
+            timerCircle.style.background = 'conic-gradient(#87CEEB 0%, rgba(135, 206, 235, 0.2) 0%)';
         } else if (mode === 'long-break') {
             longBreakBtn.classList.add('active');
             timeLeft = longBreakLength * 60;
-            timerCircle.style.background = 'conic-gradient(#FF9800 0%, rgba(255, 152, 0, 0.2) 0%)';
+            timerCircle.style.background = 'conic-gradient(#B0E0E6 0%, rgba(176, 224, 230, 0.2) 0%)';
         }
 
         resetTimer();
@@ -145,11 +144,11 @@ document.addEventListener('DOMContentLoaded', function () {
         const progress = ((totalTime - timeLeft) / totalTime) * 100;
 
         if (currentMode === 'pomodoro') {
-            timerCircle.style.background = `conic-gradient(#4CAF50 ${progress}%, rgba(76, 175, 80, 0.2) ${progress}%)`;
+            timerCircle.style.background = `conic-gradient(#4A90E2 ${progress}%, rgba(74, 144, 226, 0.2) ${progress}%)`;
         } else if (currentMode === 'short-break') {
-            timerCircle.style.background = `conic-gradient(#2196F3 ${progress}%, rgba(33, 150, 243, 0.2) ${progress}%)`;
+            timerCircle.style.background = `conic-gradient(#87CEEB ${progress}%, rgba(135, 206, 235, 0.2) ${progress}%)`;
         } else {
-            timerCircle.style.background = `conic-gradient(#FF9800 ${progress}%, rgba(255, 152, 0, 0.2) ${progress}%)`;
+            timerCircle.style.background = `conic-gradient(#B0E0E6 ${progress}%, rgba(176, 224, 230, 0.2) ${progress}%)`;
         }
     }
 
