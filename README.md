@@ -1,3 +1,3 @@
 # pomofocus
 
-![alt text](image.png)
+![alt text](./app/images/image.png)
